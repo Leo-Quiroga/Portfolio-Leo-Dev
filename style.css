@@ -1,0 +1,211 @@
+/* .ubuntu-mono-regular {
+    font-family: "Ubuntu Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .ubuntu-mono-bold {
+    font-family: "Ubuntu Mono", monospace;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .ubuntu-mono-regular-italic {
+    font-family: "Ubuntu Mono", monospace;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  .ubuntu-mono-bold-italic {
+    font-family: "Ubuntu Mono", monospace;
+    font-weight: 700;
+    font-style: italic;
+  }
+   */
+
+/* Normalización */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* Mantiene ancho y alto a pesar de border y padding */
+    font-family: 'Ubuntu Mono', monospace;
+    list-style: none;
+    /*Quita estilos de la lista*/
+    text-decoration: none;
+    /*Quita estilos de enlaces*/
+    color: white;
+}
+
+body {
+    background-color: black;
+    /*to do* borrar cuando se tenga fondo final*/
+}
+
+header {
+    position: fixed;
+    /*fija el header en la parte superior*/
+    right: 0;
+    top: 0;
+    z-index: 100;
+    /*hace que el header se muestre encima de todo*/
+    width: 100%;
+    display: flex;
+    /*hace que los elementos se pongan en línea*/
+    align-items: center;
+    /*centra verticalmente*/
+    justify-content: space-between;
+    /*separa los elementos a los extremos*/
+    padding: 15px 3%;
+    background-color: transparent;
+}
+
+.logo {
+    font-size: 40px;
+    font-weight: 800;
+    font-style: normal;
+}
+
+.navlist {
+    display: flex;
+}
+
+.navlist a{
+    margin-left: 50px;
+    font-size: 15px;
+    font-weight: 600;
+    border-bottom: 2px solid transparent;
+    transition: all .5s ease;
+}
+
+.navlist a:hover{
+    border-bottom: 2px solid white;
+}
+
+#menu-icon{
+    display: none;/* esconde el icono mientras la pantalla es grande*/
+} 
+
+#menu-icon{
+    color: white;
+    font-size: 35px;
+    z-index: 101;/* sobre el header*/
+    cursor: pointer;/*aparece manito cuando el cursor está encíma*/
+}
+
+#menu-toggle{
+    display: none;
+}
+
+.menu-icon-action{
+    display: none;
+}
+
+.hero{
+    height: 100%;
+    width: 100%;
+    min-height: 100vh;/*ocupa el 100% de lo que se ve en pantalla*/
+    background: linear-gradient(245.59deg, #31494e 0%, #385e70 25%, #131313 75%);
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 2rem;
+    padding: 0 10%;
+
+}
+
+.hero-text h5{
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 25px;
+}
+
+.hero-text h4{
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.hero-text h1{
+    font-family: "Sixtyfour Convergence", sans-serif;
+    filter: hue-rotate(0deg) brightness(0) saturate(100%) invert(1); /*cambio de color al tipo de letra*/
+    font-size: 40px;
+    line-height: 1;
+    margin: 0 0 30px;
+}
+
+.hero-text p{
+    font-size: 80%;
+    margin-bottom: 40px;
+    line-height: 1.9;
+}
+
+.hero-img img{
+    width: 400px; 
+    margin: 10% 0 0 10%;
+    transition: all 1s linear;
+}
+
+.hero-img img:hover{
+    width: 450px;
+    opacity: 0.8;
+}
+
+.hero-text a{
+    display: inline-block;
+    background-color: #31494e;
+    padding: 15px 30px;
+    line-height: 1.4;
+    font-size: 22px;
+    font-weight: 500;
+    border-radius: 30px;
+    text-transform: uppercase;
+    transition: all .5s ease;
+}
+
+.hero-text i{
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.hero-text a.cv{
+    border: 2px solid rgb(141, 235, 129); 
+}
+.hero-text a.linkedin{
+    border: 2px solid rgb(37, 54, 176);
+    margin-left: 15px;
+}
+.hero-text a.github{
+    border: 2px solid rgb(89, 92, 88);
+    margin-left: 15px;
+}
+.hero-text a.itch{
+    border: 2px solid rgb(220, 135, 9);
+    margin-left: 15px;
+}
+
+.hero-text a:hover{
+    background-color: transparent;
+    transform: translateX(6px);
+}
+
+.icons{
+    position: absolute;
+    top: 50vh;
+    padding: 0 3%;
+    transform: translateY(-50%);
+}
+
+.icons i {
+    display: block;
+    margin: 26px 0;
+    font-size: 40px;
+    transition: all .5s ease;
+}
+
+.icons i:hover{
+    color: #31494e;
+    transform: translateY(-5px);
+}
